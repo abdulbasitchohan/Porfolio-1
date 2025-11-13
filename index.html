@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Picto-PortFolio </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        :root {
+            --background: #9937e9;
+            ---color: #000;
+        }
+
+        /* COSTUM CSS START */
+
+        .new-font-family {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .w-90 {
+            max-width: 90%;
+        }
+
+        .border-radius {
+            border-radius: 20px;
+        }
+
+        .border-radius-10 {
+            border-radius: 10px;
+        }
+
+        .w-40 {
+            width: 40%;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+        .hero-section-light-color {
+            background-color: rgb(240, 224, 239);
+        }
+
+        h1 {
+            font-size: 55px;
+        }
+
+        .section-1 {
+            background: linear-gradient(30deg, white, white, white, white, rgb(239, 179, 233));
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        #Home .color-text span {
+            background: linear-gradient(to top, #ffc8c8 40%, transparent 40%);
+        }
+
+        .section-1 #Home {
+            padding: 130px 0;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            border-bottom: 2px solid rgb(210, 207, 207);
+            border-top: 1px solid rgb(238, 237, 237);
+            margin: 10px 0;
+        }
+
+        .clients {
+            position: relative;
+            z-index: -1;
+        }
+
+        footer {
+            background-color: rgba(1, 14, 42, 0.84)
+        }
+
+        .scroller {
+            position: fixed;
+            bottom: 25px;
+            right: 50px;
+            font-size: 50px;
+            padding: 0px 10px;
+        }
+
+        /* COSTUM CSS END */
+
+        /* COLORS CSS START */
+
+
+
+        .purple-background {
+            background-color: var(--background);
+        }
+
+        .black-color {
+            color: var(---color);
+        }
+
+        .bg-black {
+            background-color: var(---color);
+        }
+
+        .purple-text {
+            color: var(--background);
+        }
+
+        /* COLORS CSS END */
+
+        /* TRANSITION CSS START */
+
+        .transition-sec {
+            transition: 0.9s;
+        }
+
+        /* TRANSITION CSS END */
+
+        /* HOVER CSS START */
+
+        .li-hover:hover {
+            background-color: rgba(0, 0, 0, 0.119);
+        }
+
+        .a-hover:hover {
+            color: var(--background);
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.1);
+            background-color: rgb(106, 16, 147);
+        }
+
+        .card-button-hover:hover {
+            color: white;
+            background-color: var(--background);
+        }
+
+        .hover-shadow:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.22);
+        }
+
+        .cv-button:hover {
+            border-color: var(--background);
+            color: var(--background);
+            border: 1px solid var(--background);
+            border-radius: 5px;
+        }
+
+        .side-border:hover {
+            border-left: 6px solid var(--background);
+        }
+
+        /* HOVER CSS END */
+
+        /* @media only screen and (min-width: 1900px) and (max-width: 2600px) {
+            body{
+                max-width: 50%;
+            }
+        } */
+
+        @media (max-width: 1200px) {
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .section-1 #Home {
+                padding: 100px 0;
+            }
+
+        }
+
+        @media (max-width: 555px) {
+            .navbar h2 {
+                font-size: 1.3rem;
+            }
+
+            .section-1 #Home {
+                padding: 50px 0;
+            }
+
+            .scroller {
+                bottom: 25px;
+                right: 25px;
+                font-size: 30px;
+            }
+
+        }
+    </style>
+</head>
+
+<body class="position-relative">
+    <button class="scroller purple-background rounded-circle border-0"> <a class="text-decoration-none text-white "
+            href="#Home"><i class="ri-arrow-up-s-line"></i></a> </button>
+    <header class="position-sticky top-0 bg-light">
+        <nav class="navbar container py-2">
+            <div class="d-flex gap-2 align-items-center">
+                <h3 class="rounded-circle px-3 py-2 purple-background text-light">B</h3>
+                <h2 class="fw-bold new-font-family">Brooklyn</h2>
+            </div>
+            <div class="d-flex align-items-center">
+                <ul class="d-none d-lg-flex gap-2 list-unstyled mx-2 my-1">
+                    <li class="py-3"><a class="px-3 py-3 text-decoration-none black-color a-hover" href="#Home">Home</a>
+                    </li>
+                    <li class="py-3"><a class="px-3 py-3 text-decoration-none black-color a-hover"
+                            href="#About">About</a></li>
+                    <li class="py-3"><a class="px-3 py-3 text-decoration-none black-color a-hover"
+                            href="#Process">Process</a></li>
+                    <li class="py-3"><a class="px-3 py-3 text-decoration-none black-color a-hover"
+                            href="#PortFolio">PortFolio</a></li>
+                    <li class="py-3"><a class="px-3 py-3 rounded-3 text-decoration-none black-color a-hover"
+                            href="#Blog">Blog</a></li>
+                    <li class="py-3"><a class="px-3 py-3 text-decoration-none black-color a-hover"
+                            href="#Services">Services</a></li>
+                </ul>
+                <button class="navbar-toggler fs-3 fw-bold m-2 d-block d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="ri-menu-3-line"></i>
+                </button>
+                <button
+                    class="d-none d-lg-flex px-3 py-2 px-lg-3 py-lg-2 fw-bold rounded-3 border-0 purple-background hover-scale transition-sec"><a
+                        class="text-decoration-none text-white" href="#Contact">Contact</a></button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section-1">
+        <div id="Home"
+            class="container mx-auto d-flex justify-content-between flex-column-reverse flex-lg-row text-center text-lg-start">
+            <div class="col-12 col-lg-6 d-flex justify-content-between flex-column new-font-family">
+                <div>
+                    <h1 style="margin-top: 20px;" class="lh-1 fw-bolder">Hello, I’m <br> Brooklyn Gilbert</h1>
+                    <p class="my-3 color-text">I'm a Freelance UI/UX Designer and Developer
+                         based in London, England. I strives to
+                        build immersive and beautiful web applications through carefully crafted code and user-centric
+                        design.</p>
+                    <button
+                        class="px-3 py-2 px-lg-3 py-lg-2 my-2 fw-bold fs-5 rounded-3 border-0 purple-background hover-scale transition-sec"><a
+                            class="text-decoration-none text-white" href="">Say Hello!</a></button>
+                </div>
+                <div class="d-flex justify-content-evenly flex-column flex-md-row align-items-center">
+                    <span class="hero-section-light-color align-center py-3 px-3 w-75 m-1 lh-1 rounded">
+                        <h4 class="fw-bold">15 Y.</h4>
+                        <p class="fs-6 text-black-50">Experince</p>
+                    </span>
+                    <span class="hero-section-light-color align-center py-3 px-3 w-75 m-1 lh-1 rounded ">
+                        <h4 class="fw-bold">250+</h4>
+                        <p class="fs-6 text-black-50">Projects Completed</p>
+                    </span>
+                    <span class="hero-section-light-color align-center py-3 px-3 w-75 m-1 lh-1 rounded">
+                        <h4 class="fw-bold">58</h4>
+                        <p class="fs-6 text-black-50">Happy Clients</p>
+                    </span>
+                </div>
+            </div>
+            <div class="col-11 col-lg-5 border-radius shadow-lg d-flex text-center m-auto m-lg-0">
+                <img class="w-100" src="./images/my-picture.png" alt="">
+            </div>
+        </div>
+        <div class="section-1-part-2 container border-radius shadow-lg d-flex align-items-center flex-column flex-lg-row pb-4"
+            id="About">
+            <div class="m-5">
+                <img class="img-fluid" src="./images/my-img-2.png" alt="">
+            </div>
+            <div class="col-12 col-lg-6 text-center text-lg-start">
+                <h2 class="fw-bold mt-4 fs-1">I am Professional User <br> Experience Designer</h2>
+                <p class="mt-4 text-black-50">I design and develop services for customers specializing creating stylish,
+                    modern websites, web services and online stores. My passion is to design digital user experiences.
+                </p>
+                <p class="mt-3 text-black-50">I design and develop services for customers specializing creating stylish,
+                    modern websites, web services.</p>
+                <button
+                    class="px-3 py-2 px-lg-3 py-lg-2 mt-4 fw-bold rounded-3 border-0 purple-background hover-scale transition-sec">
+                    <a class="text-decoration-none text-white" href="">My Projects </a></button>
+                <button class="py-2 mt-4 mx-3 fw-bold bg-white rounded-3 border cv-button"> <a
+                        class="black-color text-decoration-none cv-button px-4 py-2" href=""> <i
+                            class="ri-download-2-line"></i>
+                        Download CV
+                    </a> </button>
+            </div>
+        </div>
+    </section>
+    <section class="section-2 bg-light" id="Process">
+        <div
+            class="container text-center text-lg-start d-flex justify-content-between align-items-center flex-column flex-lg-row py-5">
+            <div class="col-12 col-lg-5">
+                <h2 class="fw-bold fs-1">Work Process</h2>
+                <p class="mt-4 text-black-50">Driven by design and powered by code, I create digital interfaces that
+                    feel intuitive and perform seamlessly. Every layout, animation, and component is crafted with
+                    intention — merging usability with visual clarity,</p>
+                <p class="mt-4 text-black-50">I blend clean design with efficient code to build engaging, user-friendly
+                    web experiences that stand out.</p>
+            </div>
+            <div style="margin: 20px 0" class="col-12 col-lg-6">
+                <div class="d-flex flex-column flex-md-row">
+                    <div class="bg-white p-4 border-radius mx-2 hover-shadow transition-sec">
+                        <button
+                            class="hero-section-light-color px-3 py-2 my-3 rounded-3 border-0 fs-3 purple-text card-button-hover">
+                            <i class="ri-calendar-2-line"></i>
+                        </button>
+                        <h5 class="fw-bold my-2">1. Research</h5>
+                        <p class="fs-6 text-black-50 my-3">Design meets function in every pixel, blending clarity with
+                            intuitive motion.</p>
+                    </div>
+                    <div class="bg-white p-4 border-radius mx-2 my-3 hover-shadow transition-sec">
+                        <button
+                            class="hero-section-light-color px-3 py-2 my-3 rounded-3 border-0 fs-3 purple-text card-button-hover">
+                            <i class="ri-line-chart-fill"></i>
+                        </button>
+                        <h5 class="fw-bold my-2">2. Analyze</h5>
+                        <p class="fs-6 text-black-50">Crafting clean, thoughtful interfaces where form flows seamlessly
+                            into function and clarity.</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-column flex-md-row">
+                    <div class="bg-white p-4 border-radius m-2 hover-shadow transition-sec">
+                        <button
+                            class="hero-section-light-color px-3 py-2 my-3 rounded-3 border-0 fs-3 purple-text card-button-hover">
+                            <i class="ri-pencil-line"></i>
+                        </button>
+                        <h5 class="fw-bold my-2">3. Design</h5>
+                        <p class="fs-6 text-black-50">I design seamless digital experiences with precision, purpose, and
+                            a touch of elegance.</p>
+                    </div>
+                    <div class="bg-white p-4 border-radius m- hover-shadow transition-sec">
+                        <button
+                            class="hero-section-light-color px-3 py-2 my-3 rounded-3 border-0 fs-3 purple-text card-button-hover">
+                            <i class="ri-macbook-line"></i>
+                        </button>
+                        <h5 class="fw-bold my-2">4. Launch</h5>
+                        <p class="fs-6 text-black-50">I craft digital products where thoughtful design meets
+                            performance-driven, responsive development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-3" id="PortFolio">
+        <div class="container">
+            <div class="pt-5 align-center col-12 col-lg-6 m-auto">
+                <h2 class="fw-bold fs-1">Portfolio</h2>
+                <p class="mt-4 text-black-50">Here's a selection of my recent work, showcasing my skills in creating
+                    user-centric and visually appealing interfaces.</p>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 my-5 mx-auto">
+                <div class="col">
+                    <div class="border hover-shadow transition-sec border-radius-10">
+                        <img src="./images/Portfolio-imges/portfolio-img-1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="text-black-50 fs-6">UI-UX DESIGN</p>
+                            <h3 class="fs-5 fw-bold">Product Admin Dashboard</h3>
+                            <p class="text-black-50 fs-6">I focus on crafting smooth, responsive interfaces that balance
+                                aesthetic appeal with
+                                practical functionality.</p>
+                            <button class="py-2 my-2 fw-bold bg-white rounded-3 border cv-button"> <a
+                                    class="black-color text-decoration-none cv-button px-4 py-2" href="">
+                                    Case Study
+                                    <i class="ri-arrow-right-line"></i>
+                                </a> </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border hover-shadow transition-sec border-radius-10">
+                        <img src="./images/Portfolio-imges/portfolio-img-2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="text-black-50 fs-6">UI-UX DESIGN</p>
+                            <h3 class="fs-5 fw-bold">Product Admin Dashboard</h3>
+                            <p class="text-black-50 fs-6">Designed an intuitive dashboard for product management,
+                                emphasizing clarity and user efficiency.</p>
+                            <button class="py-2 my-2 fw-bold bg-white rounded-3 border cv-button"> <a
+                                    class="black-color text-decoration-none cv-button px-4 py-2" href="">
+                                    Case Study
+                                    <i class="ri-arrow-right-line"></i>
+                                </a> </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border hover-shadow transition-sec border-radius-10">
+                        <img src="./images/Portfolio-imges/portfolio-img-3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="text-black-50 fs-6">UI-UX DESIGN</p>
+                            <h3 class="fs-5 fw-bold">Product Admin Dashboard</h3>
+                            <p class="text-black-50 fs-6">Developed a modern admin panel with a focus on usability and
+                                seamless navigation for end users and so on.</p>
+                            <button class="py-2 my-2 fw-bold bg-white rounded-3 border cv-button"> <a
+                                    class="black-color text-decoration-none cv-button px-4 py-2" href="">
+                                    Case Study
+                                    <i class="ri-arrow-right-line"></i>
+                                </a> </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border hover-shadow transition-sec border-radius-10">
+                        <img src="./images/Portfolio-imges/portfolio-img-4.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="text-black-50 fs-6">UI-UX DESIGN</p>
+                            <h3 class="fs-5 fw-bold">Product Admin Dashboard</h3>
+                            <p class="text-black-50 fs-6">Created a responsive dashboard layout that adapts smoothly
+                                across devices and screen sizes and so on.</p>
+                            <button class="py-2 my-2 fw-bold bg-white rounded-3 border cv-button"> <a
+                                    class="black-color text-decoration-none cv-button px-4 py-2" href="">
+                                    Case Study
+                                    <i class="ri-arrow-right-line"></i>
+                                </a> </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border hover-shadow transition-sec border-radius-10">
+                        <img src="./images/Portfolio-imges/portfolio-img-5.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="text-black-50 fs-6">UI-UX DESIGN</p>
+                            <h3 class="fs-5 fw-bold">Product Admin Dashboard</h3>
+                            <p class="text-black-50 fs-6">Implemented interactive charts and widgets to visualize
+                                product data effectively for stakeholders.</p>
+                            <button class="py-2 my-2 fw-bold bg-white rounded-3 border cv-button"> <a
+                                    class="black-color text-decoration-none cv-button px-4 py-2" href="">
+                                    Case Study
+                                    <i class="ri-arrow-right-line"></i>
+                                </a> </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border hover-shadow transition-sec border-radius-10">
+                        <img src="./images/Portfolio-imges/portfolio-img-6.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="text-black-50 fs-6">UI-UX DESIGN</p>
+                            <h3 class="fs-5 fw-bold">Product Admin Dashboard</h3>
+                            <p class="text-black-50 fs-6">Enhanced user experience by streamlining workflows and
+                                optimizing interface components and so on.</p>
+                            <button class="py-2 my-2 fw-bold bg-white rounded-3 border cv-button"> <a
+                                    class="black-color text-decoration-none cv-button px-4 py-2" href="">
+                                    Case Study
+                                    <i class="ri-arrow-right-line"></i>
+                                </a> </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="d-flex justify-content-center mb-5">
+            <button
+                class="px-3 py-2 px-lg-4 py-lg-3 fw-bold rounded-3 border-0 purple-background hover-scale transition-sec">
+                <a class="text-decoration-none text-white" href="">More Project</a></button>
+        </div>
+        </div>
+    </section>
+    <section class="section-4 bg-black">
+        <div class="container">
+            <div class="col-11 col-lg-7 m-auto text-center py-5">
+                <h2 class="text-white fw-bold fs-1 pt-4">Do you have a Project Idea? <br> Let's discuss your project!
+                </h2>
+                <p class="text-white-50 my-4">I'm always open to discussing new projects and creative ideas. Let's
+                    connect and build something amazing together.</p>
+                <button
+                    class="px-3 py-2 px-lg-4 py-lg-3 mt-4 fw-bold rounded-3 border-0 purple-background hover-scale transition-sec">
+                    <a class="text-decoration-none text-white" href="">Let's work Together <i
+                            class="ri-arrow-right-line"></i> </a></button>
+            </div>
+        </div>
+    </section>
+    <section id="Blog" class="section-5">
+        <div class="container">
+            <div class="pt-5 align-center col-12 col-lg-6 m-auto">
+                <h2 class="fw-bold fs-1">Blog</h2>
+                <p class="mt-4 text-black-50">Check out my recent blog posts where I share insights on design,
+                    development, and the latest industry trends.</p>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 my-5 mx-auto">
+                <div class="col">
+                    <div class="border hover-shadow transition-sec border-radius-10">
+                        <img src="./images/Blog-imges/blog-img-1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="text-black-50 fs-6">22 Oct, 2020 / 246 Comments</p>
+                            <h3 class="fs-5">Designing Engaging User Interfaces for M...</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border hover-shadow transition-sec border-radius-10">
+                        <img src="./images/Blog-imges/blog-img-2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="text-black-50 fs-6">22 Oct, 2020 / 246 Comments</p>
+                            <h3 class="fs-5">Tips for Effective Dashboard Layout...</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border hover-shadow transition-sec border-radius-10">
+                        <img src="./images/Blog-imges/blog-img-3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="text-black-50 fs-6">22 Oct, 2020 / 246 Comments</p>
+                            <h3 class="fs-5">How to Visualize Data for Better Product...</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border hover-shadow transition-sec border-radius-10">
+                        <img src="./images/Blog-imges/blog-img-4.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="text-black-50 fs-6">22 Oct, 2020 / 246 Comments</p>
+                            <h3 class="fs-5">Responsive Design: Adapting to All Devic...</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Services" class="section-6 bg-light">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between py-5">
+            <div class="col-12 col-md-5 col-lg-5 text-center text-md-start">
+                <h2 class="fs-1 fw-bold">What I do?</h2>
+                <p class="text-black-50">I specialize in designing user experiences, crafting engaging interfaces, and
+                    building robust web
+                    applications that deliver value and usability.</p>
+                <p class="text-black-50">My approach combines creativity and technical expertise to deliver solutions
+                    that are both visually
+                    appealing and highly functional for users.</p>
+                <button
+                    class="px-3 py-2 px-lg-4 py-lg-3 my-4 fw-bold rounded-3 border-0 purple-background hover-scale transition-sec">
+                    <a class="text-decoration-none text-white" href="">Say Hello!</a></button>
+            </div>
+            <div class="col-12 col-md-5 col-lg-6 d-flex flex-column gap-4">
+                <div class="bg-white p-4 border-radius-10 hover-shadow transition-sec side-border transition">
+                    <h3 class="fw-bold">User Experience (UX)</h3>
+                    <p>I design intuitive and enjoyable experiences by understanding user needs, conducting research,
+                        and creating wireframes and prototypes that enhance usability.</p>
+                </div>
+                <div class="bg-white p-4 border-radius-10 hover-shadow transition-sec side-border transition">
+                    <h3 class="fw-bold">User Experience (UX)</h3>
+                    <p>I design intuitive and enjoyable experiences by understanding user needs, conducting research,
+                        and creating wireframes and prototypes that enhance usability.</p>
+                </div>
+                <div class="bg-white p-4 border-radius-10 hover-shadow transition-sec side-border transition">
+                    <h3 class="fw-bold">User Experience (UX)</h3>
+                    <p>I design intuitive and enjoyable experiences by understanding user needs, conducting research,
+                        and creating wireframes and prototypes that enhance usability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-7 my-5">
+        <div class="container">
+            <div class="py-5 align-center col-12 col-lg-6 m-auto">
+                <h2 class="fw-bold fs-1">Happy Clients</h2>
+                <p class="mt-3 text-black-50">I've had the pleasure of working with a diverse range of companies, from
+                    startups to established brands.</p>
+            </div>
+            <div class="clients">
+                <marquee>
+                    <img src="./images/medias-imges/google.png" alt="">
+                    <img src="./images/medias-imges/dribbble.png" alt="">
+                    <img src="./images/medias-imges/linkedin.png" alt="">
+                    <img src="./images/medias-imges/amazon.png" alt="">
+                    <img src="./images/medias-imges/medium.png" alt="">
+                    <img src="./images/medias-imges/spotify.png" alt="">
+                </marquee>
+            </div>
+        </div>
+    </section>
+    <section class="section-8 my-5 py-3">
+        <div class="container">
+            <div class="align-center m-auto">
+                <h2 class="fw-bold fs-1">Testimonial</h2>
+                <p class="col-12 col-lg-6 mt-3 mx-auto text-black-50">Working with this team was a fantastic experience.
+                    Their attention to detail and commitment to quality exceeded our expectations.</p>
+                <p class="col-12 col-lg-10 mt-5 mx-auto fw-bold">“From the initial consultation to the final delivery,
+                    every step was handled professionally. The end result was a product that not only met our needs but
+                    also impressed our stakeholders. Highly recommended!”</p>
+                <p class="fw-bold">Esther Howard</p>
+                <p class="fs-6 text-black-50">Managing Director, ABC Company</p>
+            </div>
+            <div id="Contact"
+                class="px-2 px-md-3 px-lg-5 d-flex flex-column-reverse flex-lg-row gap-5 align-items-center justify-content-between py-5 mt-5 shadow-lg border-radius">
+                <div class="col-12 col-lg-5">
+                    <h2 class="text-center text-lg-start fw-bold">Let’s discuss your Project</h2>
+                    <p class="text-black-50 text-center text-lg-start my-4">I'm available for freelance work. Drop me a
+                        line if you have a project you
+                        think I'd be a good fit for.</p>
+                    <div
+                        class="col-12 col-lg-9 d-flex flex-column flex-md-row flex-lg-column gap-2 gap-md-0 gap-lg-2 flex-wrap">
+                        <div class="d-flex align-items-center hover-shadow transition-sec border-radius-10">
+                            <button
+                                class="hero-section-light-color px-3 py-2 m-3 rounded-3 border-0 fs-4 purple-text card-button-hover">
+                                <i class="ri-map-pin-2-fill"></i>
+                            </button>
+                            <div class="lh-1">
+                                <p class="fs-6 text-black-50">Address:
+                                <p class="fs-6 fw-bold">New Mexico, 31134</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center hover-shadow transition-sec border-radius-10">
+                            <button
+                                class="hero-section-light-color px-3 py-2 m-3 rounded-3 border-0 fs-4 purple-text card-button-hover">
+                                <i class="ri-mail-fill"></i>
+                            </button>
+                            <div class="lh-1">
+                                <p class="fs-6 text-black-50">My Email:</p>
+                                <p class="fs-6 fw-bold">mymail@mail.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center hover-shadow transition-sec border-radius-10">
+                            <button
+                                class="hero-section-light-color px-3 py-2 m-3 rounded-3 border-0 fs-4 purple-text card-button-hover">
+                                <i class="ri-phone-fill"></i>
+                            </button>
+                            <div class="lh-1">
+                                <p class="fs-6 text-black-50">Call Me Now:</p>
+                                <p class="fs-6 fw-bold">00-123 00000</p>
+                            </div>
+                        </div>
+                        <div class="my-4 d-flex m-auto gap-2 ">
+                            <button class="p-2 rounded-3 border-0 fs-4">
+                                <a class="text-decoration-none purple-text card-button-hover px-2 py-2 rounded-3"
+                                    href="">
+                                    <i class="ri-facebook-fill"></i>
+                                </a>
+                            </button>
+                            <button class="p-2 rounded-3 border-0 fs-4">
+                                <a class="text-decoration-none purple-text card-button-hover px-2 py-2 rounded-3"
+                                    href="">
+                                    <i class="ri-global-line"></i>
+                                </a>
+                            </button>
+                            <button class="p-2 rounded-3 border-0 fs-4">
+                                <a class="text-decoration-none purple-text card-button-hover px-2 py-2 rounded-3"
+                                    href="">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                            </button>
+                            <button class="p-2 rounded-3 border-0 fs-4">
+                                <a class="text-decoration-none purple-text card-button-hover px-2 py-2 rounded-3"
+                                    href="">
+                                    <i class="ri-linkedin-box-fill"></i>
+                                </a>
+                            </button>
+                            <button class="p-2 rounded-3 border-0 fs-4">
+                                <a class="text-decoration-none purple-text card-button-hover px-2 py-2 rounded-3"
+                                    href="">
+                                    <i class="ri-behance-fill"></i>
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <form class="col-12 col-lg-6 d-flex flex-column gap-4 px-0 px-md-3 px-lg-0">
+                    <p class="text-black-50 text-center text-lg-start col-11">I'm always open to discussing product
+                        design work or partnership opportunities.</p>
+                    <div class="">
+                        <input type="text" placeholder="Name*">
+                        <br>
+                        <input type="email" placeholder="Email*">
+                        <br>
+                        <input type="text" placeholder="Location*">
+                        <br>
+                        <input class="col-4" type="text" placeholder="Budget*">
+                        <input class="col-7 ms-3" type="text" placeholder="Subject*">
+                        <br>
+                        <input type="text" placeholder="Message*">
+                    </div>
+                    <button
+                        class="col-5 col-md-4 my-4 px-3 py-2 fw-bold rounded-3 border-0 purple-background hover-scale transition-sec">
+                        <a class="text-decoration-none text-white" href="">Submit <i class="ri-send-plane-fill"></i>
+                        </a></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER START  -->
+
+    <footer class="contanier w-100 pt-5 pb-3 text-light start-50 z-n1">
+        <div class="container-lg py-2 pt-5">
+            <div class="footer-nav d-flex justify-content-between flex-lg-row flex-column align-items-center gap-4">
+                <div class="logo d-flex align-items-center justify-content-between my-xl-0 my-1">
+                    <h3 class="rounded-circle px-3 py-2 purple-background text-light">B</h3>
+                    <h2 class="ms-2">Brooklyn</h2>
+                </div>
+                <div class="links my-xl-0 my-1 d-flex flex-xl-row flex-wrap justify-content-center gap-3">
+                    <a class="mx-1 text-light text-decoration-none" href="#Home">Home</a>
+                    <a class="mx-1 text-light text-decoration-none" href="#About">About</a>
+                    <a class="mx-1 text-light text-decoration-none" href="#Process">Process</a>
+                    <a class="mx-1 text-light text-decoration-none" href="#Portfolio">Portfolio</a>
+                    <a class="mx-1 text-light text-decoration-none" href="#Blog">Blog</a>
+                    <a class="mx-1 text-light text-decoration-none" href="#Services">Services</a>
+                    <a class="mx-1 text-light text-decoration-none" href="#Contact">Contact</a>
+                </div>
+                <div class="">
+                    <p class="my-xl-0 my-1">Copyright © 2025 Picto.</p>
+                </div>
+            </div>
+            <p class="text-center mt-xl-5 mt-2">Developed by <a class="text-light fw-bold text-decoration-none"
+                    href="#">Abdul Basit
+                </a></p>
+        </div>
+    </footer>
+
+    <!-- FOOTER END  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
